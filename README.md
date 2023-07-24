@@ -1,4 +1,4 @@
-# provider_statemanangement
+# statemanagement
 
 A new Flutter project.
 

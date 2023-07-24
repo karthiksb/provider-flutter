@@ -1,6 +1,6 @@
 {
-    "name": "provider_statemanangement",
-    "short_name": "provider_statemanangement",
+    "name": "statemanagement",
+    "short_name": "statemanagement",
     "start_url": ".",
     "display": "standalone",
     "background_color": "#0175C2",

@@ -1,33 +1,27 @@
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
+import 'package:statemanagement/FirstPage.dart';
+import 'package:statemanagement/provider/store.dart';
 
 void main() {
-  runApp(MyApp());
+  runApp(const MyApp());
 }
 
 class MyApp extends StatelessWidget {
-  @override
-  Widget build(BuildContext context) {
-    return MaterialApp(
-      home: Directionality(
-        textDirection: TextDirection.ltr, // Change to TextDirection.rtl for RTL support
-        child: MyHomePage(),
-      ),
-    );
-  }
-}
+  const MyApp({super.key});
 
-class MyHomePage extends StatelessWidget {
+  // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: Text('Directionality Example'),
-      ),
-      body: Center(
-        child: Text(
-          'Hello, World!',
-          style: TextStyle(fontSize: 24.0),
+    return ChangeNotifierProvider(
+      create: (BuildContext context)=>store(),
+      child: MaterialApp(
+        title: 'Flutter Demo',
+        theme: ThemeData(
+          colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
+          useMaterial3: true,
         ),
+        home: FirstPage(),
       ),
     );
   }

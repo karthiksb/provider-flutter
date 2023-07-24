@@ -1,4 +1,4 @@
-package com.example.provider_statemanangement
+package com.example.statemanagement
 
 import io.flutter.embedding.android.FlutterActivity
 
